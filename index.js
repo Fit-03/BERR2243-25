@@ -2,7 +2,7 @@ const { MongoClient } = require ('mongodb' ) ;
 
 async function main() {
     // Replace ‹connection-string> with your MongoDB URI
-    const uri = "mongodb://localhost: 27017"
+    const uri = "mongodb://localhost:27017/"
     const client = new MongoClient (uri);
 
     try {
@@ -13,11 +13,11 @@ async function main() {
         const collection = db. collection ("users");
 
         // Insert a document
-        await collection. insertOne({ name: "Alice", age: 25 }); 
+        await collection. insertOne({ name: "Fit", age: 21 }); 
         console. log("Document inserted!");
 
         // Query the document
-        const result = await collection. findOne({ name: "Alice" });
+        const result = await collection. findOne({ name: "Fit" });
         console. log("Query result:", result);
     } catch (err) {
         console.error("Error:", err);
@@ -26,5 +26,4 @@ async function main() {
     }
 }
 
-main( ); 
-// test to publish
+main( );
